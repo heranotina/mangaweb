@@ -1,5 +1,4 @@
 <?php
-// admin/manga-list.php
 require_once "../db.php";
 require_once "check-admin.php";
 require_once "../header.php";
@@ -10,9 +9,8 @@ $id     = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 $msg = '';
 $error = '';
 
-// XỬ LÝ XÓA
-if ($action === 'delete' && $id > 0) {
-    // ON DELETE CASCADE sẽ tự xóa chapters & pages nếu FK tạo đúng
+
+if ($action === 'delete' && $id > 0) {  
     $stmt = $conn->prepare("DELETE FROM manga WHERE id = ?");
     $stmt->bind_param("i", $id);
     if ($stmt->execute()) {
@@ -22,7 +20,6 @@ if ($action === 'delete' && $id > 0) {
     }
 }
 
-// LẤY DANH SÁCH TRUYỆN
 $res = $conn->query("SELECT id, name, slug FROM manga ORDER BY id DESC");
 ?>
 

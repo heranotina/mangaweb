@@ -1,4 +1,3 @@
-    <!--footer-->
     <footer>
       <div class="container foot">
         <div>© 2025 MangaKakaka.</div>

@@ -12,7 +12,6 @@ if ($id <= 0) {
     exit;
 }
 
-// Lấy truyện hiện tại
 $stmt = $conn->prepare("SELECT * FROM manga WHERE id = ? LIMIT 1");
 $stmt->bind_param("i", $id);
 $stmt->execute();
@@ -27,7 +26,6 @@ if (!$manga) {
 $msg = '';
 $error = '';
 
-// Xử lý cập nhật
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name        = trim($_POST['name'] ?? '');
     $slug        = trim($_POST['slug'] ?? '');
@@ -39,7 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($name === '' || $slug === '') {
         $error = 'Vui lòng nhập đầy đủ Tên truyện và Slug.';
     } else {
-        // Kiểm tra slug trùng với truyện khác
         $check = $conn->prepare("SELECT id FROM manga WHERE slug = ? AND id <> ? LIMIT 1");
         $check->bind_param("si", $slug, $id);
         $check->execute();
@@ -60,7 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($stmtUp->execute()) {
                 $msg = 'Cập nhật truyện thành công.';
-                // cập nhật lại biến hiển thị
                 $manga['name']        = $name;
                 $manga['slug']        = $slug;
                 $manga['cover_url']   = $cover_url;

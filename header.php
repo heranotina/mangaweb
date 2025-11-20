@@ -8,18 +8,13 @@ if (session_status() === PHP_SESSION_NONE) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- ĐƯỜNG DẪN FIX HOÀN CHỈNH -->
     <link rel="stylesheet" href="/website/assets/css/reset.css">
     <link rel="stylesheet" href="/website/assets/css/style.css">
-    <script src="/website/header-ui.js" defer></script>
     <title>MANGADECH</title>
   </head>
   <body>
-    <!-- HEADER -->
     <header class="header">
       <div class="container header-inner">
-        <!-- Nav trái -->
         <nav class="nav left">
           <ul>
             <li><a href="#!">Discord</a></li>
@@ -27,8 +22,6 @@ if (session_status() === PHP_SESSION_NONE) {
             <li><a href="index.php">Home</a></li>
           </ul>
         </nav>
-
-        <!-- Logo giữa -->
         <div class="logo-wrap">
           <a href="index.php">
             <img
@@ -39,8 +32,6 @@ if (session_status() === PHP_SESSION_NONE) {
             />
           </a>
         </div>
-
-        <!-- Nav phải / Action -->
         <div class="right">
           <ul class="nav">
     <li><a href="index.php">Home</a></li>
@@ -66,6 +57,4 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
       </div>
     </header>
-
-    <!-- Chừa khoảng cho header cố định -->
     <div class="header-spacer"></div>

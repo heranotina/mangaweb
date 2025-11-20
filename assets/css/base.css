@@ -13,13 +13,12 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  backdrop-filter: blur(5px); /* làm mờ */
+  backdrop-filter: blur(5px);
 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-/* common */
 a {
   text-decoration: none;
 }
@@ -40,5 +39,3 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-/* =============================header============================== */
-/* ===== Header Glass ===== */

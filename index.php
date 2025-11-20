@@ -1,8 +1,6 @@
 <?php
 require_once 'db.php';
 require_once 'header.php';
-
-// Lấy danh sách manga mới cập nhật
 $sql = "SELECT id, name, slug, cover_url, status
         FROM manga
         ORDER BY updated_at DESC
@@ -16,10 +14,8 @@ $latest = $conn->query($sqlLatest);
 
 
 <div class="body-container">
-
-    <!-- PHẦN TRUYỆN MỚI CẬP NHẬT -->
     <div class="home-section">
-        <h2 class="section-title">📌 Truyện mới cập nhật</h2>
+        <h2 class="section-title">Truyện mới cập nhật</h2>
 
         <div class="manga-grid">
             <?php if ($latest && $latest->num_rows > 0): ?>
@@ -39,11 +35,8 @@ $latest = $conn->query($sqlLatest);
         </div>
     </div>
 
-
-
-    <!-- PHẦN TẤT CẢ TRUYỆN -->
     <div class="home-section" style="margin-top:32px;">
-        <h2 class="section-title">📚 Tất cả truyện</h2>
+        <h2 class="section-title">Tất cả truyện</h2>
 
         <div class="manga-grid">
             <?php while ($m = $mangas->fetch_assoc()): ?>

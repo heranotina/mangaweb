@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <div class="auth-dialog" role="dialog" aria-modal="true" aria-labelledby="authTitle">
     <div class="auth-header">
       <h2 id="authTitle">ĐĂNG NHẬP</h2>
-      <p class="auth-sub">Chào mừng bạn đến với MangaKakaka 👋</p>
+      <p class="auth-sub">Chào mừng bạn đến với MangaKakaka</p>
     </div>
 
     <?php if ($error): ?>

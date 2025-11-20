@@ -3,7 +3,6 @@ require_once "../db.php";
 require_once "check-admin.php";
 require_once "../header.php";
 
-// Lấy chapter_id từ URL
 $chapter_id = isset($_GET['chapter_id']) ? (int)$_GET['chapter_id'] : 0;
 
 if ($chapter_id <= 0) {
@@ -12,7 +11,6 @@ if ($chapter_id <= 0) {
     exit;
 }
 
-// Lấy thông tin chapter để hiển thị
 $stmt = $conn->prepare("
     SELECT c.id, c.chapter_number, c.title, m.name AS manga_name
     FROM chapters c

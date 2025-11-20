@@ -28,10 +28,7 @@
 }
 @media (min-width: 992px) {
   .home-section .manga-grid {
-    grid-template-columns: repeat(
-      4,
-      minmax(0, 1fr)
-    ); /* 4 cột, tùy anh thích 3 hay 5 cột */
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 

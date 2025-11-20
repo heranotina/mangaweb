@@ -44,7 +44,6 @@
   font-size: 14px;
 }
 
-/* Form */
 .auth-form {
   display: grid;
   gap: 14px;
@@ -145,7 +144,6 @@
   background: #f5f5f5;
 }
 
-/* Style cho nút Log in (tuỳ chọn) */
 .btn.btn-sign-in {
   padding: 10px 16px;
   border-radius: 999px;
@@ -157,5 +155,3 @@
 .btn.btn-sign-in:hover {
   background: rgba(0, 0, 0, 0.05);
 }
-
-/* ====================== ADMIN PANEL ====================== */

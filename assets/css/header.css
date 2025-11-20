@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.55); /* kính mờ */
+  background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -12,7 +12,7 @@
 
 .header-spacer {
   height: 72px;
-} /* = chiều cao header */
+}
 .header-inner {
   height: 72px;
 }
@@ -23,7 +23,6 @@
   padding: 0 20px;
 }
 
-/* 3 cột cân nhau */
 .header-inner {
   display: flex;
   align-items: center;
@@ -37,7 +36,6 @@
   align-items: center;
 }
 
-/* logo luôn giữa tuyệt đối */
 .logo-wrap {
   justify-content: center;
 }
@@ -54,7 +52,6 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-/* menu trái và phải */
 .nav ul {
   display: flex;
   gap: 22px;
@@ -78,7 +75,6 @@
   transform: translateY(1px);
 }
 
-/* cột phải: menu phụ + nút */
 .right {
   justify-content: flex-end;
   gap: 14px;
@@ -90,7 +86,6 @@
   color: #40444b;
 }
 
-/* nút đăng nhập */
 /* .btn.btn-login {
   display: inline-block;
   padding: 10px 18px;
@@ -110,16 +105,14 @@
   transform: translateY(1px);
 } */
 
-/* trạng thái “đang ở trang này” */
 .nav a.active {
   background: rgba(0, 0, 0, 0.08);
 }
 
-/* responsive nhỏ gọn */
 @media (max-width: 900px) {
   .right .nav {
     display: none;
-  } /* ẩn menu phụ */
+  }
   .nav ul {
     gap: 14px;
   }
@@ -135,7 +128,6 @@
   }
 }
 
-/* nền tối (tùy chọn) */
 @media (prefers-color-scheme: dark) {
   .header {
     background: rgba(20, 22, 26, 0.55);
@@ -194,8 +186,8 @@ ul.hot-updates li:hover {
 }
 ul.hot-updates img {
   width: 100%;
-  height: 250px; /* đồng bộ chiều cao ảnh */
-  object-fit: cover; /* cắt ảnh cho vừa */
+  height: 250px;
+  object-fit: cover;
   border-radius: 6px;
 }
 ul.hot-updates .title {
@@ -203,7 +195,7 @@ ul.hot-updates .title {
   font-size: 14px;
   color: black;
   margin: 10px 0 5px;
-  min-height: 40px; /* giữ cho card đều nhau dù tên dài/ngắn */
+  min-height: 40px;
 }
 ul.hot-updates .chapter {
   font-size: 13px;
@@ -312,4 +304,3 @@ ul.manga-list li {
 .chapters div:first-child {
   border-top: none;
 }
-/* ===================================Footer========================================== */

@@ -10,8 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email    = trim($_POST['email'] ?? '');
     $password = trim($_POST['password'] ?? '');
     $confirm  = trim($_POST['confirm'] ?? '');
-
-    // 1. Validate cơ bản
     if ($username === '') {
         $errors[] = 'Vui lòng nhập username.';
     }
@@ -22,8 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (strlen($password) < 6) {
         $errors[] = 'Mật khẩu phải từ 6 ký tự trở lên.';
     }
-
-    // 2. Kiểm tra trùng username / email
     if (empty($errors)) {
         $stmt = $conn->prepare("SELECT id FROM users WHERE username = ? OR email = ? LIMIT 1");
         $stmt->bind_param('ss', $username, $email);
@@ -33,8 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $errors[] = 'Username hoặc email đã tồn tại.';
         }
     }
-
-    // 3. Insert vào DB
     if (empty($errors)) {
         $hash = password_hash($password, PASSWORD_DEFAULT);
         $stmt = $conn->prepare("INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, 'user')");
