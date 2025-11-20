@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  background-image: url("/website/assets/img/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  backdrop-filter: blur(5px); /* làm mờ */
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* common */
+a {
+  text-decoration: none;
+}
+.btn {
+  display: inline-block;
+  min-width: 10px;
+  padding: auto;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 4.5px;
+}
+.main-content {
+  width: 2000px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+/* =============================header============================== */
+/* ===== Header Glass ===== */

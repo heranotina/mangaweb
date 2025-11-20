@@ -1,0 +1,15 @@
+footer {
+  padding: 26px 0 32px;
+  color: #ffffff;
+  opacity: 0.8;
+  margin-top: auto;
+}
+.foot {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
+  font-size: 20px;
+}
+/* ===== AUTH MODAL (CSS-only) ===== */

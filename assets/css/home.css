@@ -1,0 +1,120 @@
+.home-wrap {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 18px;
+  padding: 18px 20px 22px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+.home-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.home-header p {
+  margin-top: 4px;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.manga-grid {
+  margin-top: 12px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+@media (min-width: 992px) {
+  .home-section .manga-grid {
+    grid-template-columns: repeat(
+      4,
+      minmax(0, 1fr)
+    ); /* 4 cột, tùy anh thích 3 hay 5 cột */
+  }
+}
+
+.manga-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 14px;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.6);
+  transition: transform 0.16s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.manga-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.75);
+  filter: brightness(1.05);
+}
+
+.manga-card-cover {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+
+.manga-card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.badge-status {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #22c55e;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.manga-card-body {
+  padding: 10px 12px 12px;
+  color: #fff;
+}
+
+.manga-card-body h3 {
+  margin: 0 0 4px;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.manga-card-meta {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .body-container {
+    padding: 20px 10px 28px;
+  }
+
+  .home-wrap {
+    padding: 14px 12px 18px;
+  }
+}
+.home-section {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #fff;
+}

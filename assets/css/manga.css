@@ -1,0 +1,109 @@
+
+.manga-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 18px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.manga-info {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.manga-cover {
+  width: 240px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.7);
+  flex-shrink: 0;
+}
+
+.manga-meta {
+  flex: 1;
+}
+
+.manga-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.manga-meta p {
+  margin: 4px 0;
+  font-size: 1.4rem;
+}
+
+.manga-desc {
+  margin-top: 8px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  opacity: 0.92;
+}
+
+.chapter-block {
+  margin-top: 24px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 14px 18px;
+  border-radius: 14px;
+}
+
+.chapter-block h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.chapter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chapter-item {
+  display: block;
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.45rem;
+  transition: background 0.18s ease, padding-left 0.18s ease;
+}
+
+.chapter-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  padding-left: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .manga-container {
+    margin: 20px auto;
+    padding: 16px;
+  }
+
+  .manga-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .manga-cover {
+    width: 210px;
+  }
+
+  .manga-meta {
+    width: 100%;
+  }
+
+  .chapter-block {
+    margin-top: 18px;
+  }
+}
+/* ========== HOME / DANH SÁCH TRUYỆN ========== */
